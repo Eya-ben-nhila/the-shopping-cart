@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Premium E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">ShopHub</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#" class="nav-link">Deals</a>
+                    <a href="#" class="nav-link">About</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-outline" onclick="goHome()">
+                        <span class="btn-icon">🏠</span>
+                        Home
+                    </button>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Store Hero Section -->
+        <section class="store-hero">
+            <div class="store-hero-content">
+                <h1 class="store-title">Premium Tech Store</h1>
+                <p class="store-subtitle">Discover cutting-edge technology with our persistent shopping cart</p>
+                <div class="store-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Cart Persistence</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Days Retention</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Handpicked selection of premium technology products</p>
+            </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <section id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <div class="cart-title">
+                <span class="cart-icon">🛒</span>
+                <h3>Shopping Cart</h3>
+            </div>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Subtotal:</span>
+                    <strong>$<span id="cart-total">0.00</span></strong>
+                </div>
+                <div class="cart-tax">
+                    <span>Tax (10%):</span>
+                    <span>$<span id="cart-tax">0.00</span></span>
+                </div>
+                <div class="cart-final-total">
+                    <span>Total:</span>
+                    <strong>$<span id="cart-final-total">0.00</span></strong>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button onclick="clearCart()" class="btn btn-danger">Clear Cart</button>
+                <button onclick="checkout()" class="btn btn-primary">
+                    Checkout
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

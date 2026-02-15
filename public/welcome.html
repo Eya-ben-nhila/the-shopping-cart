@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ShopHub - Your Premium E-commerce Experience</title>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">ShopHub</span>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-outline" onclick="goToStore()">Browse Store</button>
+                    <button class="btn btn-primary" onclick="showLogin()">Sign In</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Welcome to <span class="brand">ShopHub</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover amazing products with a shopping cart that never forgets what you love. 
+                        Your cart persists across sessions, devices, and time.
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">💾</span>
+                            <span>Persistent Cart</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔄</span>
+                            <span>Auto-Sync</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🛡️</span>
+                            <span>Secure Sessions</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" onclick="goToStore()">
+                            Start Shopping
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        <button class="btn btn-secondary btn-large" onclick="scrollToFeatures()">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="cart-demo">
+                                <div class="demo-item">
+                                    <div class="demo-product"></div>
+                                    <div class="demo-details">
+                                        <div class="demo-title">Premium Laptop</div>
+                                        <div class="demo-price">$999.99</div>
+                                    </div>
+                                </div>
+                                <div class="demo-item">
+                                    <div class="demo-product"></div>
+                                    <div class="demo-details">
+                                        <div class="demo-title">Wireless Headphones</div>
+                                        <div class="demo-price">$199.99</div>
+                                    </div>
+                                </div>
+                                <div class="demo-total">
+                                    <strong>Total: $1,199.98</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose ShopHub?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-large">🛒</div>
+                        <h3>Smart Cart Persistence</h3>
+                        <p>Your shopping cart remembers everything, even when you close your browser or restart the server. Never lose your selected items again!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-large">🌐</div>
+                        <h3>Multi-Device Support</h3>
+                        <p>Access your cart from any device. Each session is uniquely managed while maintaining your shopping progress.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-large">⏰</div>
+                        <h3>Auto-Cleanup System</h3>
+                        <p>Carts are automatically cleaned up after 7 days of inactivity, keeping the system optimized and fresh.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-large">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>No authentication required. Your shopping experience is completely private and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Preview -->
+        <section class="products-preview">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="preview-grid">
+                    <div class="preview-item">
+                        <div class="preview-image laptop"></div>
+                        <h4>Premium Laptops</h4>
+                        <p>High-performance computing</p>
+                    </div>
+                    <div class="preview-item">
+                        <div class="preview-image phone"></div>
+                        <h4>Smartphones</h4>
+                        <p>Latest mobile technology</p>
+                    </div>
+                    <div class="preview-item">
+                        <div class="preview-image headphones"></div>
+                        <h4>Audio Equipment</h4>
+                        <p>Immersive sound experience</p>
+                    </div>
+                    <div class="preview-item">
+                        <div class="preview-image tablet"></div>
+                        <h4>Tablets</h4>
+                        <p>Portable productivity</p>
+                    </div>
+                </div>
+                <div class="preview-actions">
+                    <button class="btn btn-primary btn-large" onclick="goToStore()">
+                        View All Products
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to start shopping?</h2>
+                    <p>Join thousands of satisfied customers who never lose their cart again.</p>
+                    <button class="btn btn-primary btn-large" onclick="goToStore()">
+                        Shop Now
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="logo">
+                            <span class="logo-icon">🛍️</span>
+                            <span class="logo-text">ShopHub</span>
+                        </div>
+                        <p>Your premium e-commerce destination with persistent cart technology.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#" onclick="goToStore()">Shop Now</a></li>
+                            <li><a href="#" onclick="scrollToFeatures()">Features</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 ShopHub. All rights reserved. | Persistent Cart Technology™</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back!</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                </form>
+                <div class="modal-divider">
+                    <span>OR</span>
+                </div>
+                <button class="btn btn-secondary btn-full" onclick="goToStore()">
+                    Continue as Guest
+                </button>
+                <p class="modal-footer-text">
+                    Don't have an account? <a href="#" onclick="showSignup()">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html>
